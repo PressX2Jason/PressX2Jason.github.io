@@ -1,0 +1,38 @@
+{
+  "job": {
+    "company": {
+      "name": "MDA",
+      "street": "13800 Commerce Pkwy",
+      "city": "Richmond",
+      "province": "BC",
+      "postalCode": "V6V 2J3"
+    },
+    "title": "Junior Software Engineer",
+    "startDate": "2016-01",
+    "endDate": "2017-02",
+    "accomplishments": [
+      {
+        "Process": [
+          "Collaborated with a team of eleven people, six of those developers",
+          "Worked in an Agile setting with two week sprints and multiple user stores per sprint",
+          "Created acceptance tests, time estimates, and subtasks for each user story",
+          "Performed code reviews to ensure code quality was maintained"
+        ]
+      },
+      {
+        "Front-end": [
+          "Continued developing a single-page web application using Angular.js",
+          "Transformed the frontend using FontAwesome Icons, Glyphicons, and Twitter Bootstrap"
+        ]
+      },
+      {
+        "Back-end:": [
+          "Used JAXB Objects to communicate between other subcomponents via an ActiveMQ queue",
+          "Developed a RESTful backend to service the HMI using Spring MVC and Java 8",
+          "Expanded upon existing Hibernate JPA Mappings for a PostGreSQL database",
+          "Ensured that the database migration was as painless as possible by using Flyaway"
+        ]
+      }
+    ]
+  }
+}
