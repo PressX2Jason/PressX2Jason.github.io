@@ -8,8 +8,6 @@ export default class Resume extends React.Component {
             <div className="resume">
                 I am a Resume.
                 <Section/>
-                <Section/>
-                <Section/>
             </div>
         );
     }
