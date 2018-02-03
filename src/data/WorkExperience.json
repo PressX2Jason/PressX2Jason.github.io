@@ -11,8 +11,12 @@
       "title": "Associate Technical Artist",
       "contract": false,
       "startDate": "2016-01",
-      "endDate": "",
+      "endDate": null,
       "accomplishments": [
+        "Created custom scripts in C#, MEL, and Python to solve never before encountered problems",
+        "Participated in code reviews to minimize impact of rolling out breaking changes",
+        "Supported artists by using Nintendo Switch development kits by performing setups, upgrading SDK, trouble shooting rendering issues, and documenting the whole process",
+        "Supported rolling "
       ]
     },
     {
