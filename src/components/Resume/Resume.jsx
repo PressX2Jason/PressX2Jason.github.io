@@ -7,7 +7,7 @@ export default class Resume extends React.Component {
   render() {
     return (
       <div className="resume">
-        {WorkExp.jobs.map(job => <Section job={job} />)}
+        {WorkExp.jobs.map((job, index) => <Section key ={index} job={job} />)}
       </div>
     );
   }
