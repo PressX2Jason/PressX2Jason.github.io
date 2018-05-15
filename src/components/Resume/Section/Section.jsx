@@ -1,30 +1,40 @@
 import React from "react";
-import SectionHeader from "./SectionHeader/SectionHeader";
+import { formatStartEndDates } from "./DateFormater";
+import { Card, CardHeader, CardTitle, CardText } from "material-ui/Card";
 
 export default class Section extends React.Component {
-  constructor(props) {
-    super(props);
+  renderCardWithWidth(widthAsPercent) {
+    return (
+      <Card style={{ width: widthAsPercent }}>
+        <CardHeader title={this.props.job.company.name} />
+        <CardTitle
+          title={this.props.job.title}
+          subtitle={formatStartEndDates(
+            this.props.job.startDate,
+            this.props.job.endDate
+          )}
+        />
+        <CardText>
+          {this.props.job.accomplishments.map(mapAccomplishments)}
+        </CardText>
+      </Card>
+    );
   }
 
   render() {
-    return (
-      <div className="section">
-        {this.props.job.title}
-        <SectionHeader
-          company={this.props.job.company}
-          startDate={this.props.job.startDate}
-          endDate={this.props.job.endDate}
-        />
-        <div>{this.props.job.accomplishments.map(mapAccomplishments)}</div>
-      </div>
-    );
+    let width = window.screen.availWidth;
+    if (width > 720) {
+      return this.renderCardWithWidth("60%");
+    } else {
+      return this.renderCardWithWidth("90%");
+    }
   }
 }
 
 function mapAccomplishments(accomplishment, index) {
   let htmlContent = undefined;
   if (accomplishment.length && typeof accomplishment.valueOf() === "string") {
-    htmlContent = accomplishment;
+    htmlContent = <p> {accomplishment} </p>;
   } else if (
     accomplishment.sectionTitle &&
     accomplishment.sectionAccomplishments
@@ -33,7 +43,7 @@ function mapAccomplishments(accomplishment, index) {
       <span>
         <h1>{accomplishment.sectionTitle}</h1>
         {accomplishment.sectionAccomplishments.map((item, index) => (
-          <div key={index}> {item} </div>
+          <p key={index}> {item} </p>
         ))}
       </span>
     );
@@ -47,7 +57,7 @@ function mapAccomplishments(accomplishment, index) {
     console.log(errorMessage);
     throw errorMessage;
   }
-  return <div key={index}>{htmlContent}</div>;
+  return htmlContent;
 }
 
 Section.defaultProps = {
