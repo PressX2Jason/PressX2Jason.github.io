@@ -13,7 +13,7 @@ export default class Section extends React.Component {
             this.props.job.startDate,
             this.props.job.endDate
           )}
-        />
+        />  
         <CardText>
           {this.props.job.accomplishments.map(mapAccomplishments)}
         </CardText>
@@ -34,13 +34,13 @@ export default class Section extends React.Component {
 function mapAccomplishments(accomplishment, index) {
   let htmlContent = undefined;
   if (accomplishment.length && typeof accomplishment.valueOf() === "string") {
-    htmlContent = <p> {accomplishment} </p>;
+    htmlContent = <p key={index}> {accomplishment} </p>;
   } else if (
     accomplishment.sectionTitle &&
     accomplishment.sectionAccomplishments
   ) {
     htmlContent = (
-      <span>
+      <span key={accomplishment.sectionTitle}>
         <h1>{accomplishment.sectionTitle}</h1>
         {accomplishment.sectionAccomplishments.map((item, index) => (
           <p key={index}> {item} </p>
