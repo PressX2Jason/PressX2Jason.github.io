@@ -33,7 +33,7 @@
       "endDate": "2017-02",
       "accomplishments": [
         {
-          "sectionTitle": "Process",
+          "sectionTitle": "Process:",
           "sectionAccomplishments": [
             "Collaborated with a team of eleven people, six of those developers",
             "Worked in an Agile setting with two week sprints and multiple user stores per sprint",
@@ -42,7 +42,7 @@
           ]
         },
         {
-          "sectionTitle": "Front-end",
+          "sectionTitle": "Front-end:",
           "sectionAccomplishments": [
             "Continued developing a single-page web application using Angular.js",
             "Transformed the frontend using FontAwesome Icons, Glyphicons, and Twitter Bootstrap"
