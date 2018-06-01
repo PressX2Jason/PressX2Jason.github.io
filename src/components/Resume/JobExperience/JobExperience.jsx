@@ -12,20 +12,19 @@ export default class JobExperience extends React.Component {
     return (
       <Card className="card">
         <CardContent className="content">
-          <Typography className="title" color="textSecondary">
+          <Typography variant="headline" color="primary">
             {this.props.job.company.name}
           </Typography>
-          <Typography variant="headline" component="h2">
+          <Typography variant="title">
             {this.props.job.title}
           </Typography>
           <Divider />
-          <Typography className="p" color="textSecondary" key={`${this.props.job}startEndDate`}>
-            {formatStartEndDates(
-              this.props.job.startDate,
-              this.props.job.endDate
-            )}
+          <Typography variant="caption" color="textSecondary" key={`${this.props.job}startEndDate`} gutterBottom>
+            {formatStartEndDates(this.props.job.startDate, this.props.job.endDate) + (this.props.job.contract ? " (Contract) " : "")}
           </Typography>
           {this.props.job.accomplishments.map(mapAccomplishments)}
+          <Divider />
+          {this.props.job.technologies.map(mapTechnologiesToChips)}
         </CardContent>
       </Card>
     );
@@ -33,23 +32,23 @@ export default class JobExperience extends React.Component {
 }
 
 function mapAccomplishments(accomplishment, index) {
+  const accomplishmentVariant = "body2";
   let htmlContent = undefined;
   if (accomplishment.hasOwnProperty("sectionTitle") && accomplishment.hasOwnProperty("sectionAccomplishments")) {
     htmlContent = [
-      <Typography component="h3" key={accomplishment.sectionTitle}>
+      <Typography className="sectionTitle" key={accomplishment.sectionTitle}>
         {accomplishment.sectionTitle}
       </Typography>
     ];
-
     accomplishment.sectionAccomplishments.forEach(accomplishment => {
-      htmlContent.push(<Typography component="p" key={accomplishment}>
-        {accomplishment}
-      </Typography>)
+      htmlContent.push(
+        <Typography className="sectionAccomplishments" variant={accomplishmentVariant} key={accomplishment}>
+          {accomplishment}
+        </Typography>)
     });
-
   } else {
     htmlContent = (
-      <Typography component="p" key={accomplishment}>
+      <Typography variant={accomplishmentVariant} key={accomplishment}>
         {accomplishment}
       </Typography>
     );
@@ -61,6 +60,10 @@ function mapAccomplishments(accomplishment, index) {
     throw errorMessage;
   }
   return htmlContent;
+}
+
+function mapTechnologiesToChips(technology, index){
+  
 }
 
 JobExperience.defaultProps = {
