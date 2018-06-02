@@ -7,6 +7,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip'
 
+const dividerChipStyle = {
+  margin: "1em",
+};
+
+const chipStyle = {
+  margin: "0.25em",
+}
 
 export default class JobExperience extends React.Component {
   render() {
@@ -24,8 +31,8 @@ export default class JobExperience extends React.Component {
             {formatStartEndDates(this.props.job.startDate, this.props.job.endDate) + (this.props.job.contract ? " (Contract) " : "")}
           </Typography>
           {this.props.job.accomplishments.map(mapAccomplishments)}
-          <Divider />
-          {this.props.job.technologies.map(mapTechnologiesToChips)}
+          <Divider style={dividerChipStyle} />
+          {this.props.job.technologies.sort().map(mapTechnologiesToChips)}
         </CardContent>
       </Card>
     );
@@ -67,6 +74,6 @@ function mapTechnologiesToChips(technology, index) {
   return <Chip
     label={technology}
     key={technology}
-    component="p"
+    style={chipStyle}
     className="technologyChip" />
 }

@@ -29,7 +29,7 @@ export default class Resume extends React.Component {
         alignContent="center"
         justify="center"
       >
-        {/* <Grid
+        <Grid
           className="item"
           key="aboutMe" item
           xs={xsBreakpoint}
@@ -37,8 +37,9 @@ export default class Resume extends React.Component {
           md={mdBreakPoint}
           xl={xlBreakPoint}
         >
-        <AboutMe />
-        </Grid> */}
+          <AboutMe />
+        </Grid>
+
         {this.state.jobs.map((job) =>
           <Grid
             className="item"
@@ -51,6 +52,7 @@ export default class Resume extends React.Component {
             <JobExperience job={job} />
           </Grid>
         )}
+        
       </Grid>
     );
   }

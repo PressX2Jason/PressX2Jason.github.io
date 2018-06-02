@@ -19,7 +19,7 @@
         "Independantly rolled out updates in waves to minimize chances of adverse affects"
       ],
       "technologies": [
-        "Maya"
+        "Autodesk Maya", "Python 3.x", "Python 2.x", "Code Reviews", "Nintendo Switch", "MEL", "C#", "Artist Support"
       ]
     },
     {
@@ -62,7 +62,7 @@
         }
       ],
       "technologies": [
-        "Angularjs"
+        "Angularjs", "JAXB Objects", "Agile", "Sprints", "User Stories", "Code Reviews", "Java 8", "Flyaway", "Hibernate", "JPA", "REST", "Single Page Application", "PostGreSQL", "Spring MVC"
       ]
     },
     {
@@ -83,7 +83,7 @@
         "Solved custom changes to the database using critical thinking and out of the box approaches"
       ],
       "technologies": [
-        "PL/SQL"
+        "PL/SQL", "SQL Developer", "Views", "Indices", "Stored Procedures", "Stored Functions", "Tables", "Optimization"
       ]
     },
     {
@@ -105,7 +105,7 @@
         "Closely worked with software team to provide intensive support to a large business client"
       ],
       "technologies": [
-        "C#"
+        "C#", "Java", "HP QuickTest Pro", "Prototyping", "Testing", "Client Facing"
       ]
     }
   ]
