@@ -5,6 +5,7 @@ import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import Chip from '@material-ui/core/Chip'
 
 
 export default class JobExperience extends React.Component {
@@ -62,13 +63,10 @@ function mapAccomplishments(accomplishment, index) {
   return htmlContent;
 }
 
-function mapTechnologiesToChips(technology, index){
-  
+function mapTechnologiesToChips(technology, index) {
+  return <Chip
+    label={technology}
+    key={technology}
+    component="p"
+    className="technologyChip" />
 }
-
-JobExperience.defaultProps = {
-  job: {
-    company: {},
-    accomplishments: []
-  }
-};

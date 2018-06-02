@@ -17,6 +17,9 @@
         "Participated in code reviews with an agile team to minimize impact of rolling out breaking changes",
         "Used Nintendo Switch development kits to performing setups, SDK upgrades, troubleshooting rendering issues, while creating documentation for the process",
         "Independantly rolled out updates in waves to minimize chances of adverse affects"
+      ],
+      "technologies": [
+        "Maya"
       ]
     },
     {
@@ -57,6 +60,9 @@
             "Ensured that the database migration was as painless as possible by using Flyaway"
           ]
         }
+      ],
+      "technologies": [
+        "Angularjs"
       ]
     },
     {
@@ -75,6 +81,9 @@
         "Designed Stored Procedures, Stored Functions, Indices, Views, Tables, PL/SQL programs for Oracle 11g database using SQL Developer",
         "Optimized Views, Stored Procedures, and Stored Functions to reduce running time",
         "Solved custom changes to the database using critical thinking and out of the box approaches"
+      ],
+      "technologies": [
+        "PL/SQL"
       ]
     },
     {
@@ -94,6 +103,9 @@
         "Decreased a weekly chronic job’s time from four hours to fifteen minutes through automated scripts, reducing the number of people required from seven to two",
         "Engineered tests in HP QuickTest Pro to perform regression testing of the flagship software",
         "Closely worked with software team to provide intensive support to a large business client"
+      ],
+      "technologies": [
+        "C#"
       ]
     }
   ]
