@@ -40,11 +40,14 @@ export default class JobExperience extends React.Component {
 }
 
 function mapAccomplishments(accomplishment, index) {
+  const sectionTitle = "title"
   const accomplishmentVariant = "body2";
+
   let htmlContent = undefined;
+
   if (accomplishment.hasOwnProperty("sectionTitle") && accomplishment.hasOwnProperty("sectionAccomplishments")) {
     htmlContent = [
-      <Typography className="sectionTitle" key={accomplishment.sectionTitle}>
+      <Typography className="sectionTitle" variant={sectionTitle} key={accomplishment.sectionTitle}>
         {accomplishment.sectionTitle}
       </Typography>
     ];

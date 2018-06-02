@@ -1,0 +1,10 @@
+.aboutMeDetails {
+    display: 'flex';
+    flexDirection: 'column';
+}
+
+.avatarStyle {
+    border-radius: 0;
+    width: 200;
+    height: 200;
+}
