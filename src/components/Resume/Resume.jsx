@@ -6,6 +6,13 @@ import WorkExp from "../../data/WorkExperience";
 
 
 export default class Resume extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      jobs: WorkExp.jobs
+    }
+  }
+
   render() {
     /*cannot do this with `direction = "row"` because then it doesn't fill the width to maximun
      cannot for the life of me figure out how to make this work with `xl = {6}` */
@@ -13,7 +20,7 @@ export default class Resume extends React.Component {
     const smBreakpoint = 10;
     const mdBreakPoint = 8;
     const xlBreakPoint = 7;
-    
+
     return (
       <Grid
         container
@@ -32,7 +39,7 @@ export default class Resume extends React.Component {
         >
         <AboutMe />
         </Grid> */}
-        {WorkExp.jobs.map((job) =>
+        {this.state.jobs.map((job) =>
           <Grid
             className="item"
             key={job.company.name} item
