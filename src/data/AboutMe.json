@@ -1,0 +1,10 @@
+{
+    "name" : "Jason Wu",
+    "introduction" : "this is about me!",
+    "contact" :{
+        "phone" : "778-861-6961",
+        "linkedin": "https://www.linkedin.com/in/softwaredevjasonwu/",
+        "github": "https://github.com/DrWusiji",
+        "email": "h.jason.wu@gmail.com"
+    }
+}

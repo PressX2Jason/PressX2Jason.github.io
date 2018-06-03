@@ -2,6 +2,7 @@ import React from "react";
 import Grid from '@material-ui/core/Grid';
 import AboutMe from "./aboutMe/AboutMe"
 import JobExperience from "./jobExperience/JobExperience";
+import Introduction from "../../data/AboutMe";
 import WorkExp from "../../data/WorkExperience";
 
 
@@ -9,6 +10,7 @@ export default class Resume extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      aboutMe: Introduction,
       jobs: WorkExp.jobs
     }
   }
@@ -37,7 +39,9 @@ export default class Resume extends React.Component {
           md={mdBreakPoint}
           xl={xlBreakPoint}
         >
-          <AboutMe />
+          <AboutMe name={this.state.aboutMe.name} 
+          introduction={this.state.aboutMe.introduction}
+          contact={this.state.aboutMe.contact}/>
         </Grid>
 
         {this.state.jobs.map((job) =>
