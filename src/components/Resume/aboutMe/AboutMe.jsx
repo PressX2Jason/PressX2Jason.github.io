@@ -28,9 +28,10 @@ const card = {
 }
 
 const avatarStyle = {
-    "borderRadius": 0,
-    width: 200,
-    height: 200,
+    borderRadius: 0,
+    width: "100%",
+    height: "100%",
+    margin: "auto",
 }
 
 export default class AboutMe extends React.Component {
@@ -54,7 +55,7 @@ export default class AboutMe extends React.Component {
                                     </Avatar>
                                 }
                                 style={chipStyle}
-                                label={this.props.contact.linkedin}
+                                label="softwaredevjasonwu"
                                 onClick={() => openUrl(this.props.contact.linkedin)} />
                             <Chip
                                 avatar={
@@ -63,7 +64,7 @@ export default class AboutMe extends React.Component {
                                     </Avatar>
                                 }
                                 style={chipStyle}
-                                label={this.props.contact.github}
+                                label="DrWusiji"
                                 onClick={() => openUrl(this.props.contact.github)}
                             />
                             <Chip

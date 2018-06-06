@@ -4,26 +4,26 @@ import AboutMe from "./aboutMe/AboutMe"
 import JobExperience from "./jobExperience/JobExperience";
 import Introduction from "../../data/AboutMe";
 import WorkExp from "../../data/WorkExperience";
+import Education from "./education/Education"
 
 
 export default class Resume extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      aboutMe: Introduction,
-      jobs: WorkExp.jobs
-    }
-  }
-
   render() {
     return (
       <div className="resume">
-        {centerGrid(<AboutMe name={this.state.aboutMe.name}
-          introduction={this.state.aboutMe.introduction}
-          contact={this.state.aboutMe.contact} />)}
-
-        {this.state.jobs.map((job) =>
-          centerGrid(<JobExperience job={job} />, job.company.name))}
+        {centerGrid(<AboutMe name={Introduction.name}
+          introduction={Introduction.introduction}
+          contact={Introduction.contact} />,
+          Introduction.name)
+        }
+        {WorkExp.jobs.map((job) =>
+          centerGrid(<JobExperience job={job} />,
+            job.company.name))
+        }
+        {
+          centerGrid(<Education education={Introduction.education} />,
+            Introduction.education.school)
+        }
       </div >
     );
   }
@@ -32,6 +32,7 @@ export default class Resume extends React.Component {
 function centerGrid(item, key) {
   return (<Grid
     container
+    key={key}
     spacing={16}
     justify="center" >
     {gridItem(item, key)}
