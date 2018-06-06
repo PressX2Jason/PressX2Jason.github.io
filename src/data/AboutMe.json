@@ -1,0 +1,15 @@
+{
+    "name": "Jason Wu",
+    "introduction": "I've worked in many different places, from medium sized companies with a start-up feel, to large multi-national corperations. A jack-of-all-trades, I've worked on a wild variety of projects, from creating new in-house tools, to migrating old customers onto a new system, to maintaining and expanding enterprise solutions. I have recently returned from a two and half month trip of europe with my girlfriend and I'm looking for oppertunities to expand my horizons. An avid gamer, I enjoy playing all genre of games, from RTSs to RPGs to even board games. I like to balance out my activities by exploring the numerous trails around Metro Vancouver.",
+    "contact": {
+        "phone": "778-861-6961",
+        "linkedin": "https://www.linkedin.com/in/softwaredevjasonwu/",
+        "github": "https://github.com/DrWusiji",
+        "email": "h.jason.wu@gmail.com"
+    },
+    "education":{
+        "school": "Simon Fraser University",
+        "degree": "Bachelor of Science in Computing Science",
+        "graduationDate": "2014-12"
+    }
+}
