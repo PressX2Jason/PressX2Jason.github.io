@@ -14,9 +14,9 @@
       "endDate": "2018-02",
       "accomplishments": [
         "Worked with cutting edge technology to create custom scripts, solving out of the box problems",
-        "Participated in code reviews with an agile team to minimize impact of rolling out breaking changes",
-        "Used Nintendo Switch development kits to performing setups, SDK upgrades, troubleshooting rendering issues, while creating documentation for the process",
-        "Independantly rolled out updates in waves to minimize chances of adverse affects"
+        "Participated in code reviews with an agile team to ensure coding standards were upheld",
+        "Used Nintendo Switch development kits to perform setups, SDK upgrades, troubleshoot rendering issues, while creating documentation for the process",
+        "Independently rolled out updates in waves to reduce chances of adverse affects"
       ],
       "technologies": [
         "Autodesk Maya", "Python 3.x", "Python 2.x", "Code Reviews", "Nintendo Switch", "MEL", "C#", "Artist Support"
@@ -62,7 +62,7 @@
         }
       ],
       "technologies": [
-        "Angularjs", "JAXB Objects", "Agile", "Sprints", "User Stories", "Code Reviews", "Java 8", "Flyaway", "Hibernate", "JPA", "REST", "Single Page Application", "PostGreSQL", "Spring Boot", "Spring MVC", "Mockito", "PowerMockito", "Bootstrap", "FontAwesome", "Glyphicon", "HTML", "XML", "QueryDSL"
+        "AngularJS", "JAXB Objects", "Agile", "Sprints", "User Stories", "Code Reviews", "Java 8", "Flyaway", "Hibernate", "JPA", "REST", "Single Page Application", "PostGreSQL", "Spring Boot", "Spring MVC", "Mockito", "PowerMockito", "Bootstrap", "FontAwesome", "Glyphicon", "HTML", "XML", "QueryDSL"
       ]
     },
     {
