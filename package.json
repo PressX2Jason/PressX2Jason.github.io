@@ -2,7 +2,7 @@
   "name": "jason-wu-resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://drwusiji.github.io/react-js-show-and-tell/",
+  "homepage": "https://drwusiji.github.io",
   "dependencies": {
     "@material-ui/core": "^1.1.0",
     "@material-ui/icons": "^1.1.0",
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
