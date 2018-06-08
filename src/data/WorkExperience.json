@@ -1,0 +1,112 @@
+{
+  "jobs": [
+    {
+      "company": {
+        "name": "Electronic Arts (EA)",
+        "street": "4330 Sanderson Way",
+        "city": "Burnaby",
+        "province": "BC",
+        "postalCode": "V5G 4X1"
+      },
+      "title": "Associate Technical Artist",
+      "contract": true,
+      "startDate": "2017-02",
+      "endDate": "2018-02",
+      "accomplishments": [
+        "Worked with cutting edge technology to create custom scripts, solving out of the box problems",
+        "Participated in code reviews with an agile team to ensure coding standards were upheld",
+        "Used Nintendo Switch development kits to perform setups, SDK upgrades, troubleshoot rendering issues, while creating documentation for the process",
+        "Independently rolled out updates in waves to reduce chances of adverse affects"
+      ],
+      "technologies": [
+        "Autodesk Maya", "Python 3.x", "Python 2.x", "Code Reviews", "Nintendo Switch", "MEL", "C#", "Artist Support"
+      ]
+    },
+    {
+      "company": {
+        "name": "MDA",
+        "street": "13800 Commerce Pkwy",
+        "city": "Richmond",
+        "province": "BC",
+        "postalCode": "V6V 2J3"
+      },
+      "title": "Junior Software Engineer",
+      "contract": false,
+      "startDate": "2016-01",
+      "endDate": "2017-02",
+      "accomplishments": [
+        {
+          "sectionTitle": "Process:",
+          "sectionAccomplishments": [
+            "Collaborated with a team of eleven people, six of those developers",
+            "Worked in an Agile setting with two week sprints and multiple user stores per sprint",
+            "Created acceptance tests, time estimates, and subtasks for each user story",
+            "Performed code reviews to ensure code quality was maintained"
+          ]
+        },
+        {
+          "sectionTitle": "Front-end:",
+          "sectionAccomplishments": [
+            "Continued developing a single-page web application using Angular.js",
+            "Transformed the frontend using FontAwesome Icons, Glyphicons, and Twitter Bootstrap"
+          ]
+        },
+        {
+          "sectionTitle": "Back-end:",
+          "sectionAccomplishments": [
+            "Used JAXB Objects to communicate between other subcomponents via an ActiveMQ queue",
+            "Developed a RESTful backend to service the HMI using Spring MVC and Java 8",
+            "Expanded upon existing Hibernate JPA Mappings for a PostGreSQL database",
+            "Ensured that the database migration was as painless as possible by using Flyaway"
+          ]
+        }
+      ],
+      "technologies": [
+        "AngularJS", "JAXB Objects", "Agile", "Sprints", "User Stories", "Code Reviews", "Java 8", "Flyaway", "Hibernate", "JPA", "REST", "Single Page Application", "PostGreSQL", "Spring Boot", "Spring MVC", "Mockito", "PowerMockito", "Bootstrap", "FontAwesome", "Glyphicon", "HTML", "XML", "QueryDSL"
+      ]
+    },
+    {
+      "company": {
+        "name": "Cengea Solutions Inc",
+        "street": "1188 W Georgia St",
+        "city": "Vancouver",
+        "province": "BC",
+        "postalCode": "V6E 4A2"
+      },
+      "title": "Application Developer",
+      "contract": true,
+      "startDate": "2015-02",
+      "endDate": "2015-08",
+      "accomplishments": [
+        "Designed Stored Procedures, Stored Functions, Indices, Views, Tables, PL/SQL programs for Oracle 11g database using SQL Developer",
+        "Optimized Views, Stored Procedures, and Stored Functions to reduce running time",
+        "Solved custom changes to the database using critical thinking and out of the box approaches"
+      ],
+      "technologies": [
+        "PL/SQL", "SQL Developer", "Views", "Indices", "Stored Procedures", "Stored Functions", "Tables", "Optimization"
+      ]
+    },
+    {
+      "company": {
+        "name": "Boeing Canada – AeroInfo",
+        "street": "1188 W Georgia St",
+        "city": "Vancouver",
+        "province": "BC",
+        "postalCode": "V6E 4A2"
+      },
+      "title": "Junior Data Analyst, Co-op",
+      "contract": false,
+      "startDate": "2013-05",
+      "endDate": "2013-12",
+      "accomplishments": [
+        "Developed custom solutions in C# and Java for teammates in an individual setting",
+        "Decreased a weekly chronic job’s time from four hours to fifteen minutes through automated scripts, reducing the number of people required from seven to two",
+        "Engineered tests in HP QuickTest Pro to perform regression testing of the flagship software",
+        "Closely worked with software team to provide intensive support to a large business client"
+      ],
+      "technologies": [
+        "C#", "Java", "HP QuickTest Pro", "Prototyping", "Testing", "Client Facing"
+      ]
+    }
+  ]
+}
