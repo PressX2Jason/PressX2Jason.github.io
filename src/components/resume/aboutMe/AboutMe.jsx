@@ -10,10 +10,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 
-import LinkedinBox from 'mdi-material-ui/Linkedin'
-import GithubBox from 'mdi-material-ui/GithubCircle'
-import Phone from '@material-ui/icons/Phone'
-import Email from '@material-ui/icons/Email'
+import LinkedinBox from 'mdi-material-ui/Linkedin';
+import GithubBox from 'mdi-material-ui/GithubCircle';
+import Download from 'mdi-material-ui/Download';
+import Phone from '@material-ui/icons/Phone';
+import Email from '@material-ui/icons/Email';
 
 
 const avatar1961w = require("../../../data/images/avatar-1961w.jpg");
@@ -80,12 +81,22 @@ export default class AboutMe extends React.Component {
                             <Chip
                                 avatar={
                                     <Avatar>
-                                        <Email titleAccess="gMail email" />
+                                        <Email titleAccess="GMail email" />
                                     </Avatar>
                                 }
                                 style={chipStyle}
                                 label={this.props.contact.email}
                                 onClick={() => openUrl(`mailto:${this.props.contact.email}`)}
+                            />
+                            <Chip
+                                avatar={
+                                    <Avatar>
+                                        <Download titleAccess="Download pdf copy of the resume" />
+                                    </Avatar>
+                                }
+                                style={chipStyle}
+                                label="Download .pdf"
+                                onClick={() => openUrl(this.props.downloadLink)}
                             />
                         </CardContent>
                     </Grid>

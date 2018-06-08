@@ -13,7 +13,9 @@ export default class Resume extends React.Component {
       <div className="resume">
         {centerGrid(<AboutMe name={Introduction.name}
           introduction={Introduction.introduction}
-          contact={Introduction.contact} />,
+          contact={Introduction.contact} 
+          downloadLink={Introduction.pdf}
+          />,
           Introduction.name)
         }
         {WorkExp.jobs.map((job) =>
