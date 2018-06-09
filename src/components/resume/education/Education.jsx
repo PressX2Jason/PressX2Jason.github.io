@@ -6,6 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { Divider } from "@material-ui/core";
 
+
+var moment = require("moment");
+
 const graduationDateStyle ={
     textAlign: "right",
 }
@@ -30,7 +33,7 @@ export default class Education extends React.Component {
                                 {this.props.education.degree}
                             </Grid>
                             <Grid item xs={6} style={graduationDateStyle}>
-                                    {this.props.education.graduationDate}
+                                    {formatDate(this.props.education.graduationDate)}
                             </Grid>
                         </Grid>
                     </Typography>
@@ -38,6 +41,13 @@ export default class Education extends React.Component {
             </Card>
         )
     };
+}
+
+function formatDate(date){
+    const inputStringFormat = "YYYY-MM";
+    const outputStringFormat = "MMM YYYY";
+
+    return moment(date, inputStringFormat).format(outputStringFormat);
 }
 
 Education.defaultProps = {
