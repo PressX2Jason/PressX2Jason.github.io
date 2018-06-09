@@ -9,7 +9,7 @@ import { Divider } from "@material-ui/core";
 
 var moment = require("moment");
 
-const graduationDateStyle ={
+const graduationDateStyle = {
     textAlign: "right",
 }
 
@@ -33,7 +33,7 @@ export default class Education extends React.Component {
                                 {this.props.education.degree}
                             </Grid>
                             <Grid item xs={6} style={graduationDateStyle}>
-                                    {formatDate(this.props.education.graduationDate)}
+                                {formatDate(this.props.education.graduationDate)}
                             </Grid>
                         </Grid>
                     </Typography>
@@ -43,7 +43,7 @@ export default class Education extends React.Component {
     };
 }
 
-function formatDate(date){
+function formatDate(date) {
     const inputStringFormat = "YYYY-MM";
     const outputStringFormat = "MMM YYYY";
 
