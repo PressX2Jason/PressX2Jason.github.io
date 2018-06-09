@@ -11,7 +11,7 @@ function formatDates(startDate, endDate) {
   const endMoment = moment(endDate, inputStringFormat);
 
   let startFormatString;
-  const endFormatString = "MMM YYYY";;
+  const endFormatString = "MMM YYYY";
 
   if (startMoment.year() === endMoment.year()) {
     startFormatString = "MMM";
