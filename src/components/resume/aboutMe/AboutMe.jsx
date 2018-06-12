@@ -35,6 +35,10 @@ const avatarStyle = {
     margin: "auto",
 }
 
+const dividerStyle = {
+    margin: "1em",
+};
+
 export default class AboutMe extends React.Component {
     render() {
         return (
@@ -46,9 +50,9 @@ export default class AboutMe extends React.Component {
                     <Grid item xs={12} sm={8}>
                         <CardContent>
                             <Typography variant="headline">{this.props.name}</Typography>
-                            <Divider light />
+                            <Divider light style={dividerStyle} />
                             <Typography variant="subheading" color="textSecondary">{this.props.introduction}</Typography>
-                            <Divider />
+                            <Divider style={dividerStyle} />
                             <Chip
                                 avatar={
                                     <Avatar>
@@ -104,6 +108,11 @@ export default class AboutMe extends React.Component {
             </Card>
         );
     }
+}
+
+AboutMe.defaultProps = {
+    "contact": {},
+    "education": {}
 }
 
 function openUrl(url) {

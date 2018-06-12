@@ -32,5 +32,5 @@ function formatDuration(startDate, endDate) {
   if (durationMoment.years() !== 0) {
     duration = `${durationMoment.years()} Year${durationMoment.years() > 1 ? "s" : ""} ${duration}`;
   }
-  return `( ${duration} )`;
+  return `(${duration})`;
 }
