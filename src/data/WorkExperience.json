@@ -24,49 +24,6 @@
     },
     {
       "company": {
-        "name": "MDA",
-        "street": "13800 Commerce Pkwy",
-        "city": "Richmond",
-        "province": "BC",
-        "postalCode": "V6V 2J3"
-      },
-      "title": "Junior Software Engineer",
-      "contract": false,
-      "startDate": "2016-01",
-      "endDate": "2017-02",
-      "accomplishments": [
-        {
-          "sectionTitle": "Process:",
-          "sectionAccomplishments": [
-            "Collaborated with a team of eleven people, six of those developers",
-            "Worked in an Agile setting with two week sprints and multiple user stores per sprint",
-            "Created acceptance tests, time estimates, and subtasks for each user story",
-            "Performed code reviews to ensure code quality was maintained"
-          ]
-        },
-        {
-          "sectionTitle": "Front-end:",
-          "sectionAccomplishments": [
-            "Continued developing a single-page web application using Angular.js",
-            "Transformed the frontend using FontAwesome Icons, Glyphicons, and Twitter Bootstrap"
-          ]
-        },
-        {
-          "sectionTitle": "Back-end:",
-          "sectionAccomplishments": [
-            "Used JAXB Objects to communicate between other subcomponents via an ActiveMQ queue",
-            "Developed a RESTful backend to service the HMI using Spring MVC and Java 8",
-            "Expanded upon existing Hibernate JPA Mappings for a PostGreSQL database",
-            "Ensured that the database migration was as painless as possible by using Flyaway"
-          ]
-        }
-      ],
-      "technologies": [
-        "AngularJS", "JAXB Objects", "Agile", "Sprints", "User Stories", "Code Reviews", "Java 8", "Flyaway", "Hibernate", "JPA", "REST", "Single Page Application", "PostGreSQL", "Spring Boot", "Spring MVC", "Mockito", "PowerMockito", "Bootstrap", "FontAwesome", "Glyphicon", "HTML", "XML", "QueryDSL"
-      ]
-    },
-    {
-      "company": {
         "name": "Cengea Solutions Inc",
         "street": "1188 W Georgia St",
         "city": "Vancouver",

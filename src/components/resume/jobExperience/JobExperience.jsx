@@ -1,76 +1,96 @@
 import React from "react";
 import { formatStartEndDates } from "./DateFormater";
-import "./JobExperience.css"
+import "./JobExperience.css";
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Chip from '@material-ui/core/Chip'
+import Chip from '@material-ui/core/Chip';
+import Grid from "@material-ui/core/Grid";
 
-const dividerChipStyle = {
+const dividerStyle = {
   margin: "1em",
 };
 
 const chipStyle = {
   margin: "0.25em",
+
 }
 
 export default class JobExperience extends React.Component {
   render() {
+    console.log("processing ")
     return (
       <Card className="card">
         <CardContent className="content">
-          <Typography variant="headline" color="primary">
-            {this.props.job.company.name}
-          </Typography>
-          <Typography variant="title">
-            {this.props.job.title}
-          </Typography>
-          <Divider />
-          <Typography variant="caption" color="textSecondary" key={`${this.props.job}startEndDate`} gutterBottom>
-            {formatStartEndDates(this.props.job.startDate, this.props.job.endDate) + (this.props.job.contract ? " (Contract) " : "")}
-          </Typography>
-          {this.props.job.accomplishments.map(mapAccomplishments)}
-          <Divider style={dividerChipStyle} />
-          {this.props.job.technologies.sort().map(mapTechnologiesToChips)}
+          <Grid container spacing={0}>
+            <Grid item key="companyName" xs={12} sm={4}>
+              <Typography variant="headline" color="primary">
+                {this.props.job.company.name}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container spacing={0}>
+            <Grid item xs={6}>
+              <Typography variant="title">
+                {this.props.job.title}
+              </Typography>
+            </Grid>
+            <Grid item key="startEndDates" xs={6}>
+              <Typography variant="body1" color="textSecondary" key={`${this.props.job}startEndDate`} gutterBottom align="right">
+                {formatStartEndDates(this.props.job.startDate, this.props.job.endDate)} {(this.props.job.contract ? "(Contract)" : "")}
+              </Typography>
+            </Grid>
+            <Grid item key="startEndDateDivider" xs={12}>
+              <Divider style={dividerStyle} />
+            </Grid>
+            <Grid item key="accomplishments" xs={12}>
+              {this.props.job.accomplishments.map(mapAccomplishments)}
+            </Grid>
+            <Grid item key="accomplishmentsDivider" xs={12}>
+              <Divider style={dividerStyle} />
+            </Grid>
+            <Grid item key="technologyChips" xs={12}>
+              {this.props.job.technologies.sort().map(mapTechnologiesToChips)}
+            </Grid>
+          </Grid>
         </CardContent>
-      </Card>
+      </Card >
     );
   }
 }
 
-function mapAccomplishments(accomplishment, index) {
-  const sectionTitle = "title"
-  const accomplishmentVariant = "body2";
+function mapAccomplishments(accomplishment, index, array) {
+  const accomplishmentVariant = "body1";
 
   let htmlContent = undefined;
 
   if (accomplishment.hasOwnProperty("sectionTitle") && accomplishment.hasOwnProperty("sectionAccomplishments")) {
-    htmlContent = [
-      <Typography className="sectionTitle" variant={sectionTitle} key={accomplishment.sectionTitle}>
-        {accomplishment.sectionTitle}
-      </Typography>
-    ];
-    accomplishment.sectionAccomplishments.forEach(accomplishment => {
-      htmlContent.push(
-        <Typography className="sectionAccomplishments" variant={accomplishmentVariant} key={accomplishment}>
-          {accomplishment}
-        </Typography>)
-    });
+    // htmlContent = <SectionLists title={accomplishment.sectionTitle}  list={accomplishment.sectionAccomplishments} listVariant={accomplishmentVariant} />
   } else {
     htmlContent = (
       <Typography variant={accomplishmentVariant} key={accomplishment}>
-        {accomplishment}
+        {gitaccomplishment}
       </Typography>
     );
   }
 
-  if (htmlContent === undefined) {
-    const errorMessage = `unhandled accomplishment encountered at ${index}. ${accomplishment}`
-    console.log(errorMessage);
-    throw errorMessage;
-  }
   return htmlContent;
+}
+
+function SectionLists(props) {
+  return (
+    <div>
+      <Typography className="sectionTitle" variant={props.title} key={props.title}>
+        {props.title}
+      </Typography>
+      <Typography variant={props.listVariant}>
+        <ul>
+          {props.list.foreach(x => <li>x</li>)}
+        </ul>
+      </Typography>
+    </div>
+  );
 }
 
 function mapTechnologiesToChips(technology, index) {
@@ -79,4 +99,8 @@ function mapTechnologiesToChips(technology, index) {
     key={technology}
     style={chipStyle}
     className="technologyChip" />
+}
+
+JobExperience.defaultProps = {
+
 }
