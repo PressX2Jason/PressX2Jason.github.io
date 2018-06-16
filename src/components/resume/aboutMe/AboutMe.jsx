@@ -35,7 +35,21 @@ const avatarStyle = {
     margin: "auto",
 }
 
+const dividerStyle = {
+    margin: "1em",
+};
+
 export default class AboutMe extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.openUrl = this.openUrl.bind(this);
+    }
+
+    openUrl(url) {
+        window.open(url, "_blank");
+    }
+
     render() {
         return (
             <Card style={card}>
@@ -46,9 +60,9 @@ export default class AboutMe extends React.Component {
                     <Grid item xs={12} sm={8}>
                         <CardContent>
                             <Typography variant="headline">{this.props.name}</Typography>
-                            <Divider light />
+                            <Divider light style={dividerStyle} />
                             <Typography variant="subheading" color="textSecondary">{this.props.introduction}</Typography>
-                            <Divider />
+                            <Divider style={dividerStyle} />
                             <Chip
                                 avatar={
                                     <Avatar>
@@ -57,7 +71,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label="softwaredevjasonwu"
-                                onClick={() => openUrl(this.props.contact.linkedin)} />
+                                onClick={() => this.openUrl(this.props.contact.linkedin)} />
                             <Chip
                                 avatar={
                                     <Avatar>
@@ -66,7 +80,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label="DrWusiji"
-                                onClick={() => openUrl(this.props.contact.github)}
+                                onClick={() => this.openUrl(this.props.contact.github)}
                             />
                             <Chip
                                 avatar={
@@ -76,7 +90,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label={this.props.contact.phone}
-                                onClick={() => () => openUrl(`tel:+1${this.props.contact.phone}`)}
+                                onClick={() => this.openUrl(`tel:+1${this.props.contact.phone}`)}
                             />
                             <Chip
                                 avatar={
@@ -86,7 +100,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label={this.props.contact.email}
-                                onClick={() => openUrl(`mailto:${this.props.contact.email}`)}
+                                onClick={() => this.openUrl(`mailto:${this.props.contact.email}`)}
                             />
                             <Chip
                                 avatar={
@@ -96,7 +110,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label="Download .pdf"
-                                onClick={() => openUrl(this.props.downloadLink)}
+                                onClick={() => this.openUrl(this.props.downloadLink)}
                             />
                         </CardContent>
                     </Grid>
@@ -106,6 +120,7 @@ export default class AboutMe extends React.Component {
     }
 }
 
-function openUrl(url) {
-    window.open(url, "_blank");
+AboutMe.defaultProps = {
+    "contact": {},
+    "education": {}
 }
