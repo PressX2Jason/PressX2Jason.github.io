@@ -64,7 +64,7 @@ function formatAccomplishments(accomplishments) {
 
   if (accomplishments && typeof (accomplishments[0]) === 'string') {
     htmlContent.push(
-      <ul>
+      <ul key={accomplishments}>
         <Typography variant={accomplishmentStyle} key={accomplishments}>
           {accomplishments.map(x => <li key={x}>{x}</li>)}
         </Typography>
