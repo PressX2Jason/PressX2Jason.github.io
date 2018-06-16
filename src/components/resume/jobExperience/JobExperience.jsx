@@ -18,6 +18,7 @@ const chipStyle = {
 
 export default class JobExperience extends React.Component {
   render() {
+    console.log("processing ")
     return (
       <Card className="card">
         <CardContent className="content" component="div">
@@ -89,6 +90,21 @@ function formatAccomplishments(accomplishments) {
   }
 
   return htmlContent;
+}
+
+function SectionLists(props) {
+  return (
+    <div>
+      <Typography className="sectionTitle" variant={props.title} key={props.title}>
+        {props.title}
+      </Typography>
+      <Typography variant={props.listVariant}>
+        <ul>
+          {props.list.foreach(x => <li>x</li>)}
+        </ul>
+      </Typography>
+    </div>
+  );
 }
 
 function mapTechnologiesToChips(technology, index) {
