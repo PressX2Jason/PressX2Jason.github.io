@@ -14,15 +14,14 @@ const dividerStyle = {
 
 const chipStyle = {
   margin: "0.25em",
-
-}
+};
 
 export default class JobExperience extends React.Component {
   render() {
     console.log("processing ")
     return (
       <Card className="card">
-        <CardContent className="content">
+        <CardContent className="content" component="div">
           <Grid container spacing={0}>
             <Grid item key="companyName" xs={12} sm={4}>
               <Typography variant="headline" color="primary">
@@ -44,8 +43,8 @@ export default class JobExperience extends React.Component {
             <Grid item key="startEndDateDivider" xs={12}>
               <Divider style={dividerStyle} />
             </Grid>
-            <Grid item key="accomplishments" xs={12}>
-              {this.props.job.accomplishments.map(mapAccomplishments)}
+            <Grid item key="accomplishmentList" xs={12}>
+              {formatAccomplishments(this.props.job.accomplishments)}
             </Grid>
             <Grid item key="accomplishmentsDivider" xs={12}>
               <Divider style={dividerStyle} />
@@ -60,18 +59,33 @@ export default class JobExperience extends React.Component {
   }
 }
 
-function mapAccomplishments(accomplishment, index, array) {
-  const accomplishmentVariant = "body1";
+function formatAccomplishments(accomplishments) {
+  const accomplishmentStyle = "body1";
+  let htmlContent = [];
 
-  let htmlContent = undefined;
-
-  if (accomplishment.hasOwnProperty("sectionTitle") && accomplishment.hasOwnProperty("sectionAccomplishments")) {
-    // htmlContent = <SectionLists title={accomplishment.sectionTitle}  list={accomplishment.sectionAccomplishments} listVariant={accomplishmentVariant} />
+  if (accomplishments && typeof (accomplishments[0]) === 'string') {
+    htmlContent.push(
+      <ul key={accomplishments}>
+        <Typography variant={accomplishmentStyle} key={accomplishments}>
+          {accomplishments.map(x => <li key={x}>{x}</li>)}
+        </Typography>
+      </ul>
+    );
   } else {
-    htmlContent = (
-      <Typography variant={accomplishmentVariant} key={accomplishment}>
-        {gitaccomplishment}
-      </Typography>
+    accomplishments.forEach(x => {
+      htmlContent.push(
+        <Typography variant={accomplishmentStyle} key={x.sectionTitle}>
+          {x.sectionTitle}
+        </Typography>
+      );
+      htmlContent.push(
+        <ul key={x.sectionAccomplishments}>
+          <Typography variant={accomplishmentStyle} key={x.sectionAccomplishments}>
+            {x.sectionAccomplishments.map(section => <li key={section}>{section}</li>)}
+          </Typography>
+        </ul>
+      );
+    }
     );
   }
 
@@ -102,5 +116,16 @@ function mapTechnologiesToChips(technology, index) {
 }
 
 JobExperience.defaultProps = {
-
+  job: {
+    company: {
+      name: "default"
+    },
+    accomplishments: [
+      {
+        sectionTitle: "defaultSection",
+        sectionAccomplishments: []
+      }
+    ],
+    technologies: [],
+  }
 }

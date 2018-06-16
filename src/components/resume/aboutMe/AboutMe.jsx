@@ -40,6 +40,16 @@ const dividerStyle = {
 };
 
 export default class AboutMe extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.openUrl = this.openUrl.bind(this);
+    }
+
+    openUrl(url) {
+        window.open(url, "_blank");
+    }
+
     render() {
         return (
             <Card style={card}>
@@ -61,7 +71,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label="softwaredevjasonwu"
-                                onClick={() => openUrl(this.props.contact.linkedin)} />
+                                onClick={() => this.openUrl(this.props.contact.linkedin)} />
                             <Chip
                                 avatar={
                                     <Avatar>
@@ -70,7 +80,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label="DrWusiji"
-                                onClick={() => openUrl(this.props.contact.github)}
+                                onClick={() => this.openUrl(this.props.contact.github)}
                             />
                             <Chip
                                 avatar={
@@ -80,7 +90,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label={this.props.contact.phone}
-                                onClick={() => () => openUrl(`tel:+1${this.props.contact.phone}`)}
+                                onClick={() => this.openUrl(`tel:+1${this.props.contact.phone}`)}
                             />
                             <Chip
                                 avatar={
@@ -90,7 +100,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label={this.props.contact.email}
-                                onClick={() => openUrl(`mailto:${this.props.contact.email}`)}
+                                onClick={() => this.openUrl(`mailto:${this.props.contact.email}`)}
                             />
                             <Chip
                                 avatar={
@@ -100,7 +110,7 @@ export default class AboutMe extends React.Component {
                                 }
                                 style={chipStyle}
                                 label="Download .pdf"
-                                onClick={() => openUrl(this.props.downloadLink)}
+                                onClick={() => this.openUrl(this.props.downloadLink)}
                             />
                         </CardContent>
                     </Grid>
@@ -113,8 +123,4 @@ export default class AboutMe extends React.Component {
 AboutMe.defaultProps = {
     "contact": {},
     "education": {}
-}
-
-function openUrl(url) {
-    window.open(url, "_blank");
 }
