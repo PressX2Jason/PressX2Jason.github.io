@@ -81,7 +81,7 @@ export default class AboutMe extends React.Component {
                                         <StyledButton icon={<Email titleAccess="GMail" />} href={`mailto:${this.props.contact.email}`} />
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <StyledButton icon={<Download titleAccess="Download pdf copy of the resume" />} href={this.props.downloadLink} />
+                                        <StyledButton icon={<Download titleAccess="Download pdf copy of the resume" />} href={this.props.downloadLink} text=".pdf"/>
                                     </Grid>
                                 </Grid>
                             </Grid>

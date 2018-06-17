@@ -17,7 +17,7 @@ export default class StyledButton extends React.Component {
                 size="large"
                 style={buttonStyle}
                 href={this.props.href}>
-                {this.props.icon}
+                {this.props.icon} {this.props.text}
             </Button>
         );
     };
