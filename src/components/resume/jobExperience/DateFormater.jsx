@@ -30,7 +30,7 @@ function formatDuration(startDate, endDate) {
   let duration = `${durationMoment.months()} Month${durationMoment.months() > 1 ? "s" : ""}`;
 
   if (durationMoment.years() !== 0) {
-    duration = `${durationMoment.years()} Year${durationMoment.years() > 1 ? "s" : ""} ${duration}`;
+    duration = `${durationMoment.years()} Year${durationMoment.years() > 1 ? "s" : ""} and ${duration}`;
   }
   return `(${duration})`;
 }
