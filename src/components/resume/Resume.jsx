@@ -1,11 +1,16 @@
 import React from "react";
+import "./Resume.css";
+
 import Grid from '@material-ui/core/Grid';
-import AboutMe from "./aboutMe/AboutMe"
+import AboutMe from "./aboutMe/AboutMe";
 import JobExperience from "./jobExperience/JobExperience";
 import Introduction from "../../data/AboutMe";
 import WorkExp from "../../data/WorkExperience";
-import Education from "./education/Education"
+import Education from "./education/Education";
 
+const firstCardStyle = {
+  paddingTop: '4em',
+};
 
 export default class Resume extends React.Component {
   render() {
@@ -13,11 +18,12 @@ export default class Resume extends React.Component {
       <div className="resume">
         {centerGrid(<AboutMe name={Introduction.name}
           introduction={Introduction.introduction}
-          contact={Introduction.contact} 
+          contact={Introduction.contact}
           downloadLink={Introduction.pdf}
-          />,
-          Introduction.name)
-        }
+        />,
+          Introduction.name,
+          firstCardStyle
+        )}
         {WorkExp.jobs.map((job) =>
           centerGrid(<JobExperience job={job} />,
             job.company.name))
@@ -31,12 +37,13 @@ export default class Resume extends React.Component {
   }
 }
 
-function centerGrid(item, key) {
+function centerGrid(item, key, style) {
   return (<Grid
     container
     key={key}
-    spacing={16}
-    justify="center" >
+    spacing={32}
+    justify="center"
+    style={style}>
     {gridItem(item, key)}
   </Grid>
   );
