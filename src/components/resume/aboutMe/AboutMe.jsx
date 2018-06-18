@@ -21,7 +21,7 @@ const avatar1961w = require("../../../data/images/avatar-1961w.jpg");
 
 const card = {
     display: "flex",
-    wrap: "wrap"
+    wrap: "wrap",
 };
 
 const avatarStyle = {
@@ -81,7 +81,7 @@ export default class AboutMe extends React.Component {
                                         <StyledButton icon={<Email titleAccess="GMail" />} href={`mailto:${this.props.contact.email}`} />
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <StyledButton icon={<Download titleAccess="Download pdf copy of the resume" />} href={this.props.downloadLink} text=".pdf"/>
+                                        <StyledButton icon={<Download titleAccess="Download pdf copy of the resume" />} href={this.props.downloadLink} text=".pdf" />
                                     </Grid>
                                 </Grid>
                             </Grid>
