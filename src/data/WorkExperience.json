@@ -13,20 +13,18 @@
       "startDate": "2017-02",
       "endDate": "2018-02",
       "accomplishments": [
-        "Worked with cutting edge technology to create custom scripts, solving out of the box problems",
+        "Wrote Python and C# scripts to tackle unique technical difficulties encountered by the team",
         "Participated in code reviews with an agile team to ensure coding standards were upheld",
-        "Used Nintendo Switch development kits to perform setups, SDK upgrades, troubleshoot rendering issues, while creating documentation for the process",
-        "Independently rolled out updates in waves to reduce chances of adverse affects"
+        "Updated infrastructure critical software under a phased rollout strategy to minimize risk of artist downtime",
+        "Performed setups, SDK updates, and troubleshot rendering issues for the Nintendo Switch"
       ],
       "technologies": [
         "Autodesk Maya",
         "Python 3.x",
         "Python 2.x",
-        "Code Reviews",
-        "Nintendo Switch",
+        "Nintendo Switch SDK",
         "MEL",
-        "C#",
-        "Artist Support"
+        "C#"
       ]
     },
     {
@@ -73,14 +71,11 @@
         "JAXB Objects",
         "Agile",
         "Sprints",
-        "User Stories",
-        "Code Reviews",
         "Java 8",
         "Flyaway",
         "Hibernate",
         "JPA",
         "REST",
-        "Single Page Application",
         "PostGreSQL",
         "Spring Boot",
         "Spring MVC",
@@ -145,8 +140,7 @@
         "Java",
         "HP QuickTest Pro",
         "Prototyping",
-        "Testing",
-        "Client Facing"
+        "Testing"
       ]
     }
   ]
