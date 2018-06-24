@@ -1,17 +1,21 @@
 {
     "name": "Jason Wu",
-    "introduction": "I've worked in many different places, from medium sized companies with a start-up feel, to large international corporations. As a jack of all trades, I've worked on a wild variety of projects, from creating new in-house tools, to migrating old customers onto a new system, to maintaining and expanding enterprise solutions. I have recently returned from a two and half month trip of Europe with my girlfriend and I'm looking for opportunities to expand my horizons. As an avid gamer, I enjoy playing all genre of games, from RTSs to RPGs to even board games. I like to balance out my activities by exploring the numerous trails around Metro Vancouver.",
-    "introduction2":"I am a full stack software devloper. I help expand and improve existing products. When I'm not hiking with my girlfriend on the trails of the BC interior, you can find me playing all sorts of video games. From RTSs to RPGs. At the end of Feburary this year, I went on a trip of a lifetime with my girlfriend to Western Europe, we explored over 15 different european cities, ranging from London, UK to Lisbon, Portugual to Prague in the Czech Republic. Have an exciting job oppertunity that you want to me about? I'd love to hear from you",
+    "introduction": [
+        "I am a software developer with experience working in global corporations and local startups. Have an exciting job opportunity that you want to let me know about? I'd love to hear from you!",
+        "I’m fortunate to have contributed to Cengea's Land Resource Manager, a RADARSAT Constellation Mission project with MDA and most recently, a bestselling Nintendo Switch title with Electronic Arts.",
+        "At the end of February this year, I went on a trip of a lifetime with my girlfriend to Western Europe, we explored over 15 different cities, ranging from London, UK to Lisbon, Portugal to Prague in the Czech Republic.",
+        "When I'm not hiking on the trails of the BC interior, you can find me playing all sorts of video games from RTSs to RPGs. My latest fascination is with Total War: Warhammer 2."
+    ],
     "contact": {
         "phone": "778-861-6961",
         "linkedin": "https://www.linkedin.com/in/softwaredevjasonwu/",
         "github": "https://github.com/PressX2Jason",
         "email": "h.jason.wu@gmail.com"
     },
-    "education":{
+    "education": {
         "school": "Simon Fraser University",
         "degree": "Bachelor of Science in Computing Science",
         "graduationDate": "2014-12"
     },
-    "pdf":"https://drive.google.com/file/d/1qPFgrqiQio8cG45htBoBjCtedDudl1CN/view?usp=sharing"
+    "pdf": "https://drive.google.com/file/d/1qPFgrqiQio8cG45htBoBjCtedDudl1CN/view?usp=sharing"
 }
