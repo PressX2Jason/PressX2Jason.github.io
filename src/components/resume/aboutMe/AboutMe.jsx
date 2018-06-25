@@ -59,7 +59,11 @@ export default class AboutMe extends React.Component {
                                     <Divider light style={dividerStyle} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Typography variant="subheading" color="textSecondary">{this.props.introduction}</Typography>
+                                    {this.props.introduction.map(line => 
+                                        <Typography key={line} paragraph variant="body1" color="textSecondary">
+                                            {line}
+                                        </Typography>
+                                    )}
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Divider style={dividerStyle} />
