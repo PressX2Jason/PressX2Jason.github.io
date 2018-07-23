@@ -13,10 +13,9 @@
       "startDate": "2017-03",
       "endDate": "2018-02",
       "accomplishments": [
-        "Wrote Python and C# scripts to tackle unique technical difficulties encountered by the team",
-        "Participated in code reviews with an agile team to ensure coding standards were upheld",
-        "Updated infrastructure critical software under a phased rollout strategy to minimize risk of artist downtime",
-        "Performed setups, SDK updates, and troubleshot rendering issues for the Nintendo Switch"
+        "Wrote scripts in Python and C# to batch operations on game assets",
+        "Performed setups and SDK updates for Nintendo Switch development kits",
+        "Provided technical support to artists for hardware and software issues"
       ],
       "technologies": [
         "Autodesk Maya",
@@ -52,7 +51,7 @@
         {
           "sectionTitle": "Front-end:",
           "sectionAccomplishments": [
-            "Continued developing a single-page web application using Angular.js",
+            "Transformed prototype pages into fully-fledged components by connecting AngularJS controllers to the backend via RESTful APIs",
             "Transformed the frontend using FontAwesome Icons, Glyphicons, and Twitter Bootstrap"
           ]
         },
@@ -62,7 +61,9 @@
             "Used JAXB Objects to communicate between other subcomponents via an ActiveMQ queue",
             "Developed a RESTful backend to service the HMI using Spring MVC and Java 8",
             "Expanded upon existing Hibernate JPA Mappings for a PostGreSQL database",
-            "Ensured that the database migration was as painless as possible by using Flyaway"
+            "Ensured that the database migration was as painless as possible by using Flyaway",
+            "Enabled users to specify the recipient and format of products by implementing API endpoints in Java using Spring IO",
+            "Prevented software regression through the use of automated unit and integration tests written with JUnit and Mockito"
           ]
         }
       ],
@@ -102,9 +103,7 @@
       "startDate": "2015-02",
       "endDate": "2015-08",
       "accomplishments": [
-        "Designed Stored Procedures, Stored Functions, Indices, Views, Tables, PL/SQL programs for Oracle 11g database using SQL Developer",
-        "Optimized Views, Stored Procedures, and Stored Functions to reduce running time",
-        "Solved custom changes to the database using critical thinking and out of the box approaches"
+        "Designed and optimized stored procedures, stored functions, indices, views, tables, PL/SQL programs for Oracle 11g database using SQL Developer"
       ],
       "technologies": [
         "PL/SQL",
@@ -130,10 +129,8 @@
       "startDate": "2013-05",
       "endDate": "2013-12",
       "accomplishments": [
-        "Developed custom solutions in C# and Java for teammates in an individual setting",
-        "Decreased a weekly chronic job’s time from four hours to fifteen minutes through automated scripts, reducing the number of people required from seven to two",
-        "Engineered tests in HP QuickTest Pro to perform regression testing of the flagship software",
-        "Closely worked with software team to provide intensive support to a large business client"
+        "Developed tools in C# and Java for teammates in an individual setting",
+        "Reduced a weekly job from 4 hours to 15 minutes through automated scripts, also reducing the number of people required from 7 to 2"
       ],
       "technologies": [
         "C#",
