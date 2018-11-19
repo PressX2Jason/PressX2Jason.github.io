@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import StyledButton from './StyledButton';
 
+import { shallow } from 'enzyme';
+
+
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<StyledButton/>, div);
+  shallow(<StyledButton />);
 });

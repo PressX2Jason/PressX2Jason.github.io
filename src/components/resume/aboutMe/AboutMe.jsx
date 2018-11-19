@@ -98,6 +98,7 @@ export default class AboutMe extends React.Component {
 };
 
 AboutMe.defaultProps = {
+    "introduction": [],
     "contact": {},
     "education": {}
 }
