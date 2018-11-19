@@ -14,6 +14,7 @@ const dividerStyle = {
 
 const chipStyle = {
   margin: "0.25em",
+  fontWeight: "bold"
 };
 
 export default class JobExperience extends React.Component {
@@ -91,7 +92,7 @@ function formatAccomplishments(accomplishments) {
   return htmlContent;
 }
 
-function mapTechnologiesToChips(technology, index) {
+function mapTechnologiesToChips(technology) {
   return <Chip
     label={technology}
     key={technology}
