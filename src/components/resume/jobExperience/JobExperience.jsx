@@ -23,7 +23,7 @@ export default class JobExperience extends React.Component {
       <Card className="card">
         <CardContent className="content" component="div">
           <Grid container spacing={0}>
-            <Grid item key="companyName" xs={12} sm={4}>
+            <Grid item key="companyName" xs={12}>
               <Typography variant="headline" color="primary">
                 {this.props.job.company.name}
               </Typography>
