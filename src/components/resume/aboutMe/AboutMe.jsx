@@ -1,5 +1,5 @@
-import React from "react";
-import "./AboutMe.css"
+import React from 'react';
+import './AboutMe.css'
 
 import StyledButton from './styledButton/StyledButton';
 
@@ -19,18 +19,18 @@ import Phone from '@material-ui/icons/Phone';
 import Email from '@material-ui/icons/Email';
 
 
-const avatar = require("../../../data/images/avatar.jpg");
+const avatar = require('../../../data/images/avatar.jpg');
 
 const card = {
-    display: "flex",
-    wrap: "wrap",
+    display: 'flex',
+    wrap: 'wrap',
 };
 
 const avatarStyle = {
     borderRadius: 0,
-    width: "100%",
-    height: "100%",
-    margin: "auto",
+    width: '100%',
+    height: '100%',
+    margin: 'auto',
 };
 
 const circleAvatarStyle = {
@@ -40,7 +40,7 @@ const circleAvatarStyle = {
 };
 
 const dividerStyle = {
-    margin: "1em",
+    margin: '1em',
 };
 
 export default class AboutMe extends React.Component {
@@ -49,14 +49,14 @@ export default class AboutMe extends React.Component {
             <Card style={card}>
                 <Grid container spacing={16}>
                     <Grid item sm={4}>
-                        <CardMedia image={avatar} style={avatarStyle} title="That's me on the beach of Nice, France" />
+                        <CardMedia image={avatar} style={avatarStyle} title={'That\'s me on the beach of Nice, France'}/>
                     </Grid>
                     <Grid item xs={12} sm={8}>
                         <CardContent>
                             <Grid
-                                justify="center"
-                                alignItems="center"
-                                alignContent="space-around"
+                                justify='center'
+                                alignItems='center'
+                                alignContent='space-around'
                                 container
                                 spacing={16}
                             >
@@ -71,7 +71,7 @@ export default class AboutMe extends React.Component {
                                             </Grid>
                                         </Hidden>
                                         <Grid item xs={8} sm={12}>
-                                            <Typography variant="h3">{this.props.name}</Typography>
+                                            <Typography variant='h3'>{this.props.name}</Typography>
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -80,7 +80,7 @@ export default class AboutMe extends React.Component {
                                 </Grid>
                                 <Grid item xs={12}>
                                     {this.props.introduction.map(line => 
-                                        <Typography key={line} paragraph variant="body1" color="textSecondary">
+                                        <Typography key={line} paragraph variant='body1' color='textSecondary'>
                                             {line}
                                         </Typography>
                                     )}
@@ -93,19 +93,19 @@ export default class AboutMe extends React.Component {
                                     spacing={16}
                                 >
                                     <Grid item xs={3} sm={6} md={3} >
-                                        <StyledButton icon={<LinkedinBox titleAccess="Linkedin Icon" />} href={this.props.contact.linkedin} />
+                                        <StyledButton icon={<LinkedinBox titleAccess='Linkedin Icon' />} href={this.props.contact.linkedin} />
                                     </Grid>
                                     <Grid item xs={3} sm={6} md={3} >
-                                        <StyledButton icon={<GithubBox titleAccess="Github Icon" />} href={this.props.contact.github} />
+                                        <StyledButton icon={<GithubBox titleAccess='Github Icon' />} href={this.props.contact.github} />
                                     </Grid>
                                     <Grid item xs={3} sm={6} md={3} >
-                                        <StyledButton icon={<Phone titleAccess="Phone number" />} href={`tel:+1-${this.props.contact.phone}`} />
+                                        <StyledButton icon={<Phone titleAccess='Phone number' />} href={`tel:+1-${this.props.contact.phone}`} />
                                     </Grid>
                                     <Grid item xs={3} sm={6} md={3} >
-                                        <StyledButton icon={<Email titleAccess="GMail" />} href={`mailto:${this.props.contact.email}`} />
+                                        <StyledButton icon={<Email titleAccess='GMail' />} href={`mailto:${this.props.contact.email}`} />
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <StyledButton icon={<Download titleAccess="Download pdf copy of the resume" />} href={this.props.downloadLink} text=".pdf" />
+                                        <StyledButton icon={<Download titleAccess='Download pdf copy of the resume' />} href={this.props.downloadLink} text='.pdf' />
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -118,7 +118,7 @@ export default class AboutMe extends React.Component {
 };
 
 AboutMe.defaultProps = {
-    "introduction": [],
-    "contact": {},
-    "education": {}
+    'introduction': [],
+    'contact': {},
+    'education': {}
 }
