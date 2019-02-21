@@ -48,7 +48,7 @@ export default class AboutMe extends React.Component {
         return (
             <Card style={card}>
                 <Grid container spacing={16}>
-                    <Grid item xs={0} sm={4}>
+                    <Grid item sm={4}>
                         <CardMedia image={avatar} style={avatarStyle} title="That's me on the beach of Nice, France" />
                     </Grid>
                     <Grid item xs={12} sm={8}>
@@ -70,7 +70,7 @@ export default class AboutMe extends React.Component {
                                                 <Avatar style={circleAvatarStyle} src={avatar}/>
                                             </Grid>
                                         </Hidden>
-                                        <Grid item xs={8} sm={16}>
+                                        <Grid item xs={8} sm={12}>
                                             <Typography variant="h3">{this.props.name}</Typography>
                                         </Grid>
                                     </Grid>
