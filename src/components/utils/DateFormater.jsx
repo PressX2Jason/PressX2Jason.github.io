@@ -22,7 +22,7 @@ function formatDates(start, end) {
   const startMoment = createMoment(start);
   const endMoment = createMoment(end);
 
-  let startFormatString = (startMoment.year() === endMoment.year()) ? outputStringFormat : 'MMM';
+  let startFormatString = (startMoment.year() === endMoment.year()) ? 'MMM' : outputStringFormat;
 
   let startDate = startMoment.format(startFormatString);
   let endDate = endMoment.format(outputStringFormat);
