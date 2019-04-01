@@ -3,29 +3,31 @@ import './Resume.css';
 
 import Grid from '@material-ui/core/Grid';
 
-import Introduction from '../../data/AboutMe';
 import AboutMe from './aboutMe/AboutMe';
 import JobExperience from './jobExperience/JobExperience';
+import Education from './education/Education';
 import Project from './project/Project';
 
+import AboutMeData from '../../data/AboutMe';
 import WorkData from '../../data/WorkExperience';
 import ProjectData from '../../data/Project';
-import EducationData from './education/Education';
+
 
 const firstCardStyle = {
   paddingTop: '4em',
 };
+
 
 export default class Resume extends React.Component {
   render() {
     return (
       <div className='resume'>
         {centerGrid(
-          <AboutMe name={Introduction.name}
-            introduction={Introduction.introduction}
-            contact={Introduction.contact}
-            downloadLink={Introduction.pdf} />,
-          Introduction.name,
+          <AboutMe name={AboutMeData.name}
+            introduction={AboutMeData.introduction}
+            contact={AboutMeData.contact}
+            downloadLink={AboutMeData.pdf} />,
+          AboutMeData.name,
           firstCardStyle
         )}
         {WorkData.jobs.map(job =>
@@ -41,8 +43,8 @@ export default class Resume extends React.Component {
           )
         )}
         {centerGrid(
-          <EducationData education={Introduction.education} />,
-          Introduction.education.school
+          <Education education={AboutMeData.education} />,
+          AboutMeData.education.school
         )}
       </div>
     );
