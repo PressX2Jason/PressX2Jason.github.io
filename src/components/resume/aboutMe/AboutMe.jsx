@@ -39,10 +39,6 @@ const circleAvatarStyle = {
     justify: 'center',
 };
 
-const dividerStyle = {
-    margin: '1em',
-};
-
 export default class AboutMe extends React.Component {
     render() {
         return (
@@ -76,7 +72,7 @@ export default class AboutMe extends React.Component {
                                     </Grid>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Divider light style={dividerStyle} />
+                                    <Divider light id= 'aboutMeDivider'/>
                                 </Grid>
                                 <Grid item xs={12}>
                                     {this.props.introduction.map(line =>
@@ -86,7 +82,7 @@ export default class AboutMe extends React.Component {
                                     )}
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Divider style={dividerStyle} />
+                                    <Divider id='aboutMeDivider'/>
                                 </Grid>
                                 <Grid
                                     container
