@@ -13,10 +13,6 @@ const graduationDateStyle = {
     textAlign: 'right',
 }
 
-const dividerStyle = {
-    margin: '1em',
-};
-
 export default class Education extends React.Component {
     render() {
         return (
@@ -28,7 +24,7 @@ export default class Education extends React.Component {
                     <Typography variant='title'>
                         {this.props.education.school}
                     </Typography>
-                    <Divider style={dividerStyle} />
+                    <Divider id='educationDivider'/>
                     <Grid container spacing={16}
                         justify='space-between'
                         alignItems='flex-start'>

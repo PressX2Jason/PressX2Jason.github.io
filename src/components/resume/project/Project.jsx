@@ -6,20 +6,11 @@ import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import Chip from '@material-ui/core/Chip';
+
+import TechnologyChips from '../technologyChip/TechnologyChip';
+import Accomplishment from '../accomplishment/Accomplishment';
 
 import { formatStartEndDates } from '../../utils/DateFormater';
-
-const dividerStyle = {
-    margin: '1em',
-};
-
-
-const chipStyle = {
-    margin: '0.25em',
-    fontWeight: 'bold'
-};
-
 
 export default class Project extends React.Component {
     render() {
@@ -45,16 +36,16 @@ export default class Project extends React.Component {
                             </Typography>
                         </Grid>
                         <Grid item key='startEndDateDivider' xs={12}>
-                            <Divider style={dividerStyle} />
+                            <Divider id='projectDivider' />
                         </Grid>
                         <Grid item key='accomplishmentList' xs={12}>
-                            {formatAccomplishments(this.props.project.accomplishments)}
+                            <Accomplishment accomplishment={this.props.project.accomplishments} />
                         </Grid>
                         <Grid item key='accomplishmentsDivider' xs={12}>
-                            <Divider style={dividerStyle} />
+                            <Divider id='projectDivider' />
                         </Grid>
                         <Grid item key='technologyChips' xs={12}>
-                            {this.props.project.technologies.sort().map(mapTechnologiesToChips)}
+                            {this.props.project.technologies.sort().map(tech => <TechnologyChips key={tech} technology={tech} />)}
                         </Grid>
                     </Grid>
                 </CardContent>
@@ -62,30 +53,6 @@ export default class Project extends React.Component {
         );
     }
 }
-
-function formatAccomplishments(accomplishments) {
-    const accomplishmentStyle = 'body1';
-    let htmlContent = [];
-
-    htmlContent.push(
-        <ul key={accomplishments}>
-            <Typography variant={accomplishmentStyle} key={accomplishments}>
-                {accomplishments.map(x => <li key={x}>{x}</li>)}
-            </Typography>
-        </ul>
-    );
-
-    return htmlContent;
-}
-
-function mapTechnologiesToChips(technology) {
-    return <Chip
-        label={technology}
-        key={technology}
-        style={chipStyle}
-        className='technologyChip' />
-}
-
 
 Project.defaultProps = {
     project: {

@@ -1,21 +1,17 @@
 import React from 'react';
-import { formatStartEndDates } from '../../utils/DateFormater';
 import './JobExperience.css';
+
+import { formatStartEndDates } from '../../utils/DateFormater';
+
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 
-const dividerStyle = {
-  margin: '1em',
-};
+import TechnologyChips from '../technologyChip/TechnologyChip';
+import Accomplishment from '../accomplishment/Accomplishment';
 
-const chipStyle = {
-  margin: '0.25em',
-  fontWeight: 'bold'
-};
 
 export default class JobExperience extends React.Component {
   render() {
@@ -41,63 +37,22 @@ export default class JobExperience extends React.Component {
               </Typography>
             </Grid>
             <Grid item key='startEndDateDivider' xs={12}>
-              <Divider style={dividerStyle} />
+              <Divider id='jobExperienceDivider' />
             </Grid>
             <Grid item key='accomplishmentList' xs={12}>
-              {formatAccomplishments(this.props.job.accomplishments)}
+              <Accomplishment accomplishment={this.props.job.accomplishments} />
             </Grid>
             <Grid item key='accomplishmentsDivider' xs={12}>
-              <Divider style={dividerStyle} />
+              <Divider id='jobExperienceDivider' />
             </Grid>
             <Grid item key='technologyChips' xs={12}>
-              {this.props.job.technologies.sort().map(mapTechnologiesToChips)}
+              {this.props.job.technologies.sort().map(tech => <TechnologyChips key={tech} technology={tech} />)}
             </Grid>
           </Grid>
         </CardContent>
       </Card>
     );
   }
-}
-
-function formatAccomplishments(accomplishments) {
-  const accomplishmentStyle = 'body1';
-  let htmlContent = [];
-
-  if (accomplishments && typeof (accomplishments[0]) === 'string') {
-    htmlContent.push(
-      <ul key={accomplishments}>
-        <Typography variant={accomplishmentStyle} key={accomplishments}>
-          {accomplishments.map(x => <li key={x}>{x}</li>)}
-        </Typography>
-      </ul>
-    );
-  } else {
-    accomplishments.forEach(x => {
-      htmlContent.push(
-        <Typography variant={accomplishmentStyle} key={x.sectionTitle}>
-          {x.sectionTitle}
-        </Typography>
-      );
-      htmlContent.push(
-        <ul key={x.sectionAccomplishments}>
-          <Typography variant={accomplishmentStyle} key={x.sectionAccomplishments}>
-            {x.sectionAccomplishments.map(section => <li key={section}>{section}</li>)}
-          </Typography>
-        </ul>
-      );
-    }
-    );
-  }
-
-  return htmlContent;
-}
-
-function mapTechnologiesToChips(technology) {
-  return <Chip
-    label={technology}
-    key={technology}
-    style={chipStyle}
-    className='technologyChip' />
 }
 
 JobExperience.defaultProps = {
