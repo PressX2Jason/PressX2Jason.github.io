@@ -6,8 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { Divider } from '@material-ui/core';
 
+import { formatDate } from '../../utils/DateFormater';
 
-var moment = require('moment');
 
 const graduationDateStyle = {
     textAlign: 'right',
@@ -47,13 +47,6 @@ export default class Education extends React.Component {
             </Card >
         )
     };
-}
-
-function formatDate(date) {
-    const inputStringFormat = 'YYYY-MM';
-    const outputStringFormat = 'MMM YYYY';
-
-    return moment(date, inputStringFormat).format(outputStringFormat);
 }
 
 Education.defaultProps = {

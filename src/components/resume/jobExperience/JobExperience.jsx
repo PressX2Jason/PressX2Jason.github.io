@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatStartEndDates } from './DateFormater';
+import { formatStartEndDates } from '../../utils/DateFormater';
 import './JobExperience.css';
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
