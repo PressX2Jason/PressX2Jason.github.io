@@ -3,12 +3,14 @@ import './Resume.css';
 
 import Grid from '@material-ui/core/Grid';
 
+import Introduction from '../../data/AboutMe';
 import AboutMe from './aboutMe/AboutMe';
 import JobExperience from './jobExperience/JobExperience';
-import Introduction from '../../data/AboutMe';
-import WorkExp from '../../data/WorkExperience';
-import Project from '../../data/Project';
-import Education from './education/Education';
+import Project from './project/Project';
+
+import WorkData from '../../data/WorkExperience';
+import ProjectData from '../../data/Project';
+import EducationData from './education/Education';
 
 const firstCardStyle = {
   paddingTop: '4em',
@@ -18,31 +20,31 @@ export default class Resume extends React.Component {
   render() {
     return (
       <div className='resume'>
-        {
-          centerGrid(<AboutMe name={Introduction.name}
+        {centerGrid(
+          <AboutMe name={Introduction.name}
             introduction={Introduction.introduction}
             contact={Introduction.contact}
-            downloadLink={Introduction.pdf}
-          />,
-            Introduction.name,
-            firstCardStyle
+            downloadLink={Introduction.pdf} />,
+          Introduction.name,
+          firstCardStyle
+        )}
+        {WorkData.jobs.map(job =>
+          centerGrid(
+            <JobExperience job={job} />,
+            job.company.name
           )
-        }
-        {
-          WorkExp.jobs.map(job =>
-            centerGrid(<JobExperience job={job} />,
-              job.company.name))
-        }
-        {
-          Project.projects.map(project =>
-            centerGrid(<Project project={project} />,
-              project.title))
-        }
-        {
-          centerGrid(<Education education={Introduction.education} />,
-            Introduction.education.school)
-        }
-      </div >
+        )}
+        {ProjectData.projects.map(project =>
+          centerGrid(
+            <Project project={project} />,
+            project.title
+          )
+        )}
+        {centerGrid(
+          <EducationData education={Introduction.education} />,
+          Introduction.education.school
+        )}
+      </div>
     );
   }
 }
