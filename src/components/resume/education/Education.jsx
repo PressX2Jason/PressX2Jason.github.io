@@ -1,17 +1,14 @@
 import React from 'react';
-import './Education.css'
+import './Education.css';
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { Divider } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
 
 import { formatDate } from '../../utils/DateFormater';
 
-
-const graduationDateStyle = {
-    textAlign: 'right',
-}
 
 export default class Education extends React.Component {
     render() {
@@ -24,7 +21,7 @@ export default class Education extends React.Component {
                     <Typography variant='title'>
                         {this.props.education.school}
                     </Typography>
-                    <Divider id='educationDivider'/>
+                    <Divider id='educationDivider' />
                     <Grid container spacing={16}
                         justify='space-between'
                         alignItems='flex-start'>
@@ -33,7 +30,7 @@ export default class Education extends React.Component {
                                 {this.props.education.degree}
                             </Typography>
                         </Grid>
-                        <Grid item xs={6} style={graduationDateStyle}>
+                        <Grid item xs={6} className='graduationDate'>
                             <Typography variant='body1' color='textSecondary'>
                                 {formatDate(this.props.education.graduationDate)}
                             </Typography>

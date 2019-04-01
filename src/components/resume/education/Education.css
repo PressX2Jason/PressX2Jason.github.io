@@ -1,3 +1,7 @@
 #educationDivider {
     margin: 1em;
-};
+}
+
+.graduationDate{
+    text-align: right;
+}
