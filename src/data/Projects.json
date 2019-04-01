@@ -1,0 +1,20 @@
+{
+    "projects" : [
+        {
+            "title" : "Reactjs Resume",
+            "description" : "This website you see before you!",
+            "startDate" : "",
+            "endDate" : "",
+            "accomplishments" : [
+                "Personal website created in React.js applying Material design principles",
+                "Revisioned using Git and hosted using GitHub User Pages"
+            ],
+            "technologies" : [
+                "React.js",
+                "Git",
+                "GitHub User Pages",
+                "NPM"
+            ]
+        }
+    ]
+}
