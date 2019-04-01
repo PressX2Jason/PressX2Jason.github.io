@@ -2,3 +2,7 @@
     background-image: url('../../data/images/background.png');
     background-attachment: fixed;
 }
+
+.firstCard{
+    padding-top: 4em
+  };

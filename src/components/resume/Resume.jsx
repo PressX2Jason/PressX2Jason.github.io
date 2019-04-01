@@ -13,11 +13,6 @@ import WorkData from '../../data/WorkExperience';
 import ProjectData from '../../data/Project';
 
 
-const firstCardStyle = {
-  paddingTop: '4em',
-};
-
-
 export default class Resume extends React.Component {
   render() {
     return (
@@ -28,7 +23,7 @@ export default class Resume extends React.Component {
             contact={AboutMeData.contact}
             downloadLink={AboutMeData.pdf} />,
           AboutMeData.name,
-          firstCardStyle
+          'firstCard'
         )}
         {WorkData.jobs.map(job =>
           centerGrid(
@@ -51,13 +46,13 @@ export default class Resume extends React.Component {
   }
 }
 
-function centerGrid(item, key, style) {
+function centerGrid(item, key, className) {
   return (<Grid
     container
     key={key}
     spacing={32}
     justify='center'
-    style={style}>
+    className={className}>
     {gridItem(item, key)}
   </Grid>
   );
