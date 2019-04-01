@@ -45,10 +45,7 @@ export default class AboutMe extends React.Component {
                                     <Grid spacing={0} container>
                                         <Hidden smUp>
                                             <Grid item xs={4}>
-                                                <Avatar
-                                                    id = 'miniAvatar'
-                                                    src={avatar}
-                                                />
+                                                <Avatar id='miniAvatar' src={avatar} />
                                             </Grid>
                                         </Hidden>
                                         <Grid item xs={8} sm={12}>
@@ -61,18 +58,13 @@ export default class AboutMe extends React.Component {
                                 </Grid>
                                 <Grid item xs={12}>
                                     {this.props.introduction.map(line =>
-                                        <Typography key={line} paragraph variant='body1' color='textSecondary'>
-                                            {line}
-                                        </Typography>
+                                        <Typography key={line} paragraph variant='body1' color='textSecondary'>{line}</Typography>
                                     )}
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Divider id='aboutMeDivider' />
                                 </Grid>
-                                <Grid
-                                    container
-                                    spacing={16}
-                                >
+                                <Grid container spacing={16}>
                                     <Grid item xs={3} sm={6} md={3} >
                                         <StyledButton icon={<LinkedinBox titleAccess='Linkedin Icon' />} href={this.props.contact.linkedin} />
                                     </Grid>
