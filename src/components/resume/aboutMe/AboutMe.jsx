@@ -18,34 +18,19 @@ import Download from 'mdi-material-ui/Download';
 import Phone from '@material-ui/icons/Phone';
 import Email from '@material-ui/icons/Email';
 
-
 const avatar = require('../../../data/images/avatar.jpg');
-
-const card = {
-    display: 'flex',
-    wrap: 'wrap',
-};
-
-const avatarStyle = {
-    borderRadius: 0,
-    width: '100%',
-    height: '100%',
-    margin: 'auto',
-};
-
-const circleAvatarStyle = {
-    height: '3em',
-    width: '3em',
-    justify: 'center',
-};
 
 export default class AboutMe extends React.Component {
     render() {
         return (
-            <Card style={card}>
+            <Card className='aboutMeCard'>
                 <Grid container spacing={16}>
                     <Grid item sm={4}>
-                        <CardMedia image={avatar} style={avatarStyle} title={'That\'s me on the beach of Nice, France'} />
+                        <CardMedia
+                            className='fullAvatar'
+                            image={avatar}
+                            title={'That\'s me on the beach of Nice, France'}
+                        />
                     </Grid>
                     <Grid item xs={12} sm={8}>
                         <CardContent>
@@ -57,13 +42,13 @@ export default class AboutMe extends React.Component {
                                 spacing={16}
                             >
                                 <Grid item xs={12}>
-                                    <Grid
-                                        spacing={0}
-                                        container
-                                    >
+                                    <Grid spacing={0} container>
                                         <Hidden smUp>
                                             <Grid item xs={4}>
-                                                <Avatar style={circleAvatarStyle} src={avatar} />
+                                                <Avatar
+                                                    id = 'miniAvatar'
+                                                    src={avatar}
+                                                />
                                             </Grid>
                                         </Hidden>
                                         <Grid item xs={8} sm={12}>
@@ -72,7 +57,7 @@ export default class AboutMe extends React.Component {
                                     </Grid>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Divider light id= 'aboutMeDivider'/>
+                                    <Divider light id='aboutMeDivider' />
                                 </Grid>
                                 <Grid item xs={12}>
                                     {this.props.introduction.map(line =>
@@ -82,7 +67,7 @@ export default class AboutMe extends React.Component {
                                     )}
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Divider id='aboutMeDivider'/>
+                                    <Divider id='aboutMeDivider' />
                                 </Grid>
                                 <Grid
                                     container

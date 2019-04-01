@@ -1,3 +1,20 @@
-#aboutMeDivider{
+#aboutMeDivider {
     margin: 1em;
-};
+}
+
+.aboutMeCard {
+    display: flex;
+}
+
+.fullAvatar {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#miniAvatar {
+    height: 4em;
+    width: 4em;
+    margin: 0 auto;
+}
