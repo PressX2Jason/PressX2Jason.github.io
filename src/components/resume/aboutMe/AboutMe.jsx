@@ -34,9 +34,9 @@ const avatarStyle = {
 };
 
 const circleAvatarStyle = {
-    height : '3em',
+    height: '3em',
     width: '3em',
-    justify : 'center',
+    justify: 'center',
 };
 
 const dividerStyle = {
@@ -49,7 +49,7 @@ export default class AboutMe extends React.Component {
             <Card style={card}>
                 <Grid container spacing={16}>
                     <Grid item sm={4}>
-                        <CardMedia image={avatar} style={avatarStyle} title={'That\'s me on the beach of Nice, France'}/>
+                        <CardMedia image={avatar} style={avatarStyle} title={'That\'s me on the beach of Nice, France'} />
                     </Grid>
                     <Grid item xs={12} sm={8}>
                         <CardContent>
@@ -64,10 +64,10 @@ export default class AboutMe extends React.Component {
                                     <Grid
                                         spacing={0}
                                         container
-                                     >
+                                    >
                                         <Hidden smUp>
                                             <Grid item xs={4}>
-                                                <Avatar style={circleAvatarStyle} src={avatar}/>
+                                                <Avatar style={circleAvatarStyle} src={avatar} />
                                             </Grid>
                                         </Hidden>
                                         <Grid item xs={8} sm={12}>
@@ -79,7 +79,7 @@ export default class AboutMe extends React.Component {
                                     <Divider light style={dividerStyle} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    {this.props.introduction.map(line => 
+                                    {this.props.introduction.map(line =>
                                         <Typography key={line} paragraph variant='body1' color='textSecondary'>
                                             {line}
                                         </Typography>
