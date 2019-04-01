@@ -50,18 +50,13 @@ function centerGrid(item, key, style) {
 }
 
 function gridItem(item, key) {
-  const xsBreakpoint = 12;
-  const smBreakpoint = 10;
-  const mdBreakPoint = 8;
-  const xlBreakPoint = 6;
-
   return (<Grid
     className='item'
     key={key} item
-    xs={xsBreakpoint}
-    sm={smBreakpoint}
-    md={mdBreakPoint}
-    xl={xlBreakPoint}
+    xs={12}
+    sm={10}
+    md={8}
+    xl={6}
   >
     {item}
   </Grid>);
