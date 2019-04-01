@@ -54,7 +54,7 @@ export default class JobExperience extends React.Component {
             </Grid>
           </Grid>
         </CardContent>
-      </Card >
+      </Card>
     );
   }
 }
