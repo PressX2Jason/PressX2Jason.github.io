@@ -7,22 +7,32 @@ export function formatDate(date) {
   return moment(date, inputStringFormat).format(outputStringFormat);
 }
 
-export function formatStartEndDates(startDate, endDate) {
-  return `${formatDates(startDate, endDate)} ${formatDuration(startDate, endDate)}`
+export function formatStartEndDates(start, end) {
+  let dates = formatDates(start, end)
+  let duration = formatDuration(start, end)
+
+  return `${dates} ${duration}`;
 }
 
-function formatDates(startDate, endDate) {
-  const startMoment = moment(startDate, inputStringFormat);
-  const endMoment = moment(endDate, inputStringFormat);
+function createMoment(date, format = inputStringFormat) {
+  return (date) ? moment(date, format) : moment();
+}
+
+function formatDates(start, end) {
+  const startMoment = createMoment(start);
+  const endMoment = createMoment(end);
 
   let startFormatString = (startMoment.year() === endMoment.year()) ? outputStringFormat : 'MMM';
 
-  return `${startMoment.format(startFormatString)} - ${endMoment.format(outputStringFormat)}`
+  let startDate = startMoment.format(startFormatString);
+  let endDate = endMoment.format(outputStringFormat);
+
+  return `${startDate} - ${endDate}`;
 }
 
-function formatDuration(startDate, endDate) {
-  const startMoment = moment(startDate, inputStringFormat);
-  const endMoment = endDate ? moment(endDate, inputStringFormat) : moment();
+function formatDuration(start, end) {
+  const startMoment = createMoment(start);
+  const endMoment = createMoment(end);
   const durationMoment = moment.duration(endMoment.diff(startMoment));
 
   let duration = `${durationMoment.months()} Month${durationMoment.months() > 1 ? 's' : ''}`;
