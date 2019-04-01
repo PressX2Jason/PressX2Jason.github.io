@@ -27,7 +27,7 @@ function formatDates(start, end) {
   let startDate = startMoment.format(startFormatString);
   let endDate = endMoment.format(outputStringFormat);
 
-  return `${startDate} - ${endDate}`;
+  return (end) ? `${startDate} - ${endDate}` : `${startDate} - Current`;
 }
 
 function formatDuration(start, end) {
