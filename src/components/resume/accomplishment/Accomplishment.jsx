@@ -6,10 +6,10 @@ import Typography from '@material-ui/core/Typography';
 export default class Accomplishment extends React.Component {
     render() {
         const textVariant = 'body1';
-        let htmlContent = [];
-    
+        let htmlContext = null;
+
         if (this.props.accomplishment && typeof (this.props.accomplishment[0]) === 'string') {
-            htmlContent.push(
+            htmlContent = (
                 <ul key={this.props.accomplishment}>
                     <Typography variant={textVariant} key={this.props.accomplishment}>
                         {this.props.accomplishment.map(x => <li key={x}>{x}</li>)}
@@ -17,22 +17,19 @@ export default class Accomplishment extends React.Component {
                 </ul>
             );
         } else {
-            this.props.accomplishment.forEach(x => {
-                htmlContent.push(
-                    <Typography variant={textVariant} key={x.sectionTitle}>
-                        {x.sectionTitle}
+            htmlContent = this.props.accomplishment.map(accomplishment =>
+                <>
+                    <Typography variant={textVariant} key={accomplishment.sectionTitle}>
+                        {accomplishment.sectionTitle}
                     </Typography>
-                );
-                htmlContent.push(
-                    <ul key={x.sectionAccomplishments}>
-                        <Typography variant={textVariant} key={x.sectionAccomplishments}>
-                            {x.sectionAccomplishments.map(section => <li key={section}>{section}</li>)}
+                    <ul key={accomplishment.sectionAccomplishments}>
+                        <Typography variant={textVariant} key={accomplishment.sectionAccomplishments}>
+                            {accomplishment.sectionAccomplishments.map(section => <li key={section}>{section}</li>)}
                         </Typography>
                     </ul>
-                );
-            }
+                </>
             );
-        }    
+        }
 
         return (htmlContent);
     }
