@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 export default class Accomplishment extends React.Component {
     render() {
         const textVariant = 'body1';
-        let htmlContext = null;
-
+        let htmlContent = null;
+        
         if (this.props.accomplishment && typeof (this.props.accomplishment[0]) === 'string') {
             htmlContent = (
                 <ul key={this.props.accomplishment}>
@@ -18,16 +18,16 @@ export default class Accomplishment extends React.Component {
             );
         } else {
             htmlContent = this.props.accomplishment.map(accomplishment =>
-                <>
-                    <Typography variant={textVariant} key={accomplishment.sectionTitle}>
-                        {accomplishment.sectionTitle}
-                    </Typography>
-                    <ul key={accomplishment.sectionAccomplishments}>
-                        <Typography variant={textVariant} key={accomplishment.sectionAccomplishments}>
-                            {accomplishment.sectionAccomplishments.map(section => <li key={section}>{section}</li>)}
+                    <React.Fragment>
+                        <Typography variant={textVariant} key={accomplishment.sectionTitle}>
+                            {accomplishment.sectionTitle}
                         </Typography>
-                    </ul>
-                </>
+                        <ul key={accomplishment.sectionAccomplishments}>
+                            <Typography variant={textVariant} key={accomplishment.sectionAccomplishments}>
+                                {accomplishment.sectionAccomplishments.map(section => <li key={section}>{section}</li>)}
+                            </Typography>
+                        </ul>
+                    </React.Fragment>
             );
         }
 
